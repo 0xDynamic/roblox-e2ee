@@ -32,7 +32,7 @@ It uses modern cryptography primitives:
 ---
 
 ## 📂 Repository Structure
-
+```bash
 roblox-e2ee/
 ├── client/
 │   ├── init.lua
@@ -57,6 +57,7 @@ roblox-e2ee/
 │   └── tsconfig.json
 ├── README.md
 └── LICENSE
+```
 
 ---
 
