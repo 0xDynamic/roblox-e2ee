@@ -34,32 +34,29 @@ It uses modern cryptography primitives:
 ## 📂 Repository Structure
 
 roblox-e2ee/
+├── client/
+│   ├── init.lua
+│   ├── crypto.lua
+│   ├── http.lua
+│   ├── sha256.lua
+│   ├── hkdf.lua
+│   ├── chacha20.lua
+│   ├── poly1305.lua
+│   ├── aead_xchacha.lua
+│   ├── x25519_adapter.lua
+│   ├── xchacha_impl.lua
+│   └── utils.lua
+├── server/
+│   ├── src/
+│   │   ├── server.ts
+│   │   ├── crypto.ts
+│   │   ├── replayCache.ts
+│   │   ├── test_vectors.ts
+│   │   └── keyManager.ts
+│   ├── package.json
+│   └── tsconfig.json
 ├── README.md
-├── LICENSE
-├── .gitignore
-│
-├── server/ # Bun + TypeScript (Elysia.js)
-│ ├── package.json
-│ ├── tsconfig.json
-│ └── src/
-│ ├── server.ts # Elysia server entry
-│ ├── crypto.ts # X25519, HKDF, XChaCha20-Poly1305 wrappers
-│ ├── keyManager.ts # Key rotation & management
-│ ├── replayCache.ts # Replay protection
-│ └── test_vectors.ts # Sanity test with RFC vectors
-│
-└── client/ # Roblox client (Executors / Luau modules)
-├── README.md
-├── init.lua # Public API: secure_post(path, body)
-├── http.lua # HTTP adapter for executors
-├── util.lua # JSON, Base64, nonce, padding
-├── sha256.lua # SHA-256 + HMAC
-├── hkdf.lua # HKDF-SHA256
-├── chacha20.lua # ChaCha20 stream cipher
-├── poly1305.lua # Poly1305 MAC
-├── aead_xchacha.lua # AEAD wrapper
-├── x25519_adapter.lua # Executor-native or Luau X25519
-└── xchacha_impl.lua # (Optional) Pure-Luau XChaCha20-Poly1305
+└── LICENSE
 
 ---
 
