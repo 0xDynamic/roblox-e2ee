@@ -1,0 +1,24 @@
+{
+    "name": "server",
+    "module": "src/server.ts",
+    "type": "module",
+    "private": true,
+    "scripts": {
+        "start": "bun run src/server.ts",
+        "dev": "bun --watch run src/server.ts"
+    },
+    "devDependencies": {
+        "@types/bun": "latest"
+    },
+    "peerDependencies": {
+        "typescript": "^5"
+    },
+    "dependencies": {
+        "@elysiajs/cors": "^1.4.0",
+        "@noble/ciphers": "^2.0.1",
+        "@noble/curves": "^2.0.1",
+        "@noble/hashes": "^2.0.1",
+        "@scure/base": "^2.0.0",
+        "elysia": "^1.4.7"
+    }
+}
